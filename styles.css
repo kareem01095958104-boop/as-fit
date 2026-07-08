@@ -426,11 +426,16 @@ html[dir="rtl"] .price {
   min-height: 250px;
 }
 
+.transformation-single {
+  min-height: 360px;
+}
+
 .image-frame span,
 .gallery-item span {
   position: absolute;
   right: 1rem;
   bottom: 1rem;
+  max-width: calc(100% - 2rem);
   z-index: 1;
   padding: 0.35rem 0.7rem;
   border-radius: 999px;
@@ -438,6 +443,25 @@ html[dir="rtl"] .price {
   color: var(--highlight);
   font-size: 0.85rem;
   font-weight: 700;
+}
+
+.gallery-item span {
+  left: 1rem;
+  display: grid;
+  gap: 0.15rem;
+  border-radius: var(--radius-sm);
+}
+
+.gallery-item strong,
+.gallery-item small {
+  display: block;
+}
+
+.gallery-item small {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.45;
 }
 
 .image-frame::before,
@@ -466,7 +490,7 @@ html[dir="rtl"] .price {
 .photo-two::before {
     background-image:
       linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.5)),
-      url("omar hassan after.jpeg");
+      url("newtrans.jpeg");
   }
   
 .photo-three::before {
@@ -491,6 +515,15 @@ html[dir="rtl"] .price {
     background-image:
       linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.5)),
       url("youssef samir  after.jpeg");
+  }
+
+.photo-seven::before {
+    background-color: #080808;
+    background-image:
+      linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.5)),
+      url("تحويل جديد .jpeg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, contain;
   }
 
 .card-content,
@@ -587,7 +620,7 @@ html[dir="rtl"] .price {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: 1.3fr 0.9fr 0.9fr 1.1fr;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -620,6 +653,27 @@ html[dir="rtl"] .price {
   background-image:
     linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.55)),
     url("client result.jpeg");
+}
+
+.competition-stage-shot::before {
+  background-image:
+    linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.55)),
+    url("لقطات بطوله.jpeg");
+  background-position: center top;
+}
+
+.shooting-front-shot::before {
+  background-image:
+    linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.55)),
+    url("لقطات تصوير.jpeg");
+  background-position: center top;
+}
+
+.shooting-back-shot::before {
+  background-image:
+    linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.55)),
+    url("لقطات تصوير2.jpeg");
+  background-position: center top;
 }
 
 .contact-links {
